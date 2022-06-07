@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  simulationUrl: '/api/v1/simulations',
+  simulationApiUrl: '/api/v1/simulations',
+  simulationWsUrl: '/ws/v1/simulate',
 };
 
 /*

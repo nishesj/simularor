@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  simulationUrl: '/api/v1/simulations',
+  simulationApiUrl: '/api/v1/simulations',
+  simulationWsUrl: '/ws/v1/simulate',
 };

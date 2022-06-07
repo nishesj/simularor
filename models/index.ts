@@ -9,3 +9,13 @@ export interface SimulationResponse {
   scores: { [key: string]: number };
   totalScore: number;
 }
+
+export interface WsCommand {
+  command: "START_SIMULATION" | "STOP_SIMULATION";
+  payload: SimulationResponse;
+}
+
+export interface WsResponse {
+  state: "SIMULATING" | "DONE";
+  payload: SimulationResponse;
+}

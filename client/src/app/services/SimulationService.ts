@@ -23,6 +23,12 @@ export class SimulationService {
   constructor(private http: HttpClient) {}
 
   getMatches(): Observable<MatchesResponse> {
-    return this.http.get<MatchesResponse>(`${environment.simulationUrl}`);
+    return this.http.get<MatchesResponse>(`${environment.simulationApiUrl}`);
+  }
+
+  simulate(): WebSocketSubject<any> {
+    const url = new URL(environment.simulationWsUrl, location.href);
+    url.protocol = url.protocol.replace('http', 'ws');
+    return webSocket<any>(url.toString());
   }
 }
