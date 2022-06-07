@@ -5,6 +5,8 @@
   "main": "server.ts",
   "scripts": {
     "server": "nodemon server.ts",
+    "client": "npm run start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\" ",
     "test": "jest"
   },
   "repository": {
