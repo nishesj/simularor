@@ -27,7 +27,7 @@ export default class SimulationManager {
         const response: WsResponse = { state: "SIMULATING", payload: payload };
         progressCallback(response);
       }
-    }, 9 * 1000);
+    }, 10 * 1000);
     const timerId = intervalId[Symbol.toPrimitive]();
     this.simulations.set(payload.id, timerId);
   };
