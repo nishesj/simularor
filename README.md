@@ -1,5 +1,7 @@
 # How to run locally
 
+Required nodejs version > 14
+
 1. Run `npm install`
    It will install npm packages for both server and client
 2. Run `npm start`
