@@ -9,6 +9,6 @@ describe("get  matches /api/v1/matches", () => {
     expect(res.body.totalScore).toBeDefined();
     expect(res.body.scores).toBeDefined();
     expect(res.body.id).toBeDefined();
-    expect(res.body.matches.length).toEqual(3)
+    expect(res.body.matches.length).toEqual(3);
   });
 });
