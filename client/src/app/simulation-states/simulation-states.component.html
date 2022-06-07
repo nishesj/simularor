@@ -1,0 +1,22 @@
+<div class="flex justify-center mb-2">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="startPressed()"
+      *ngIf="simulationProcessState == SimulationProcessState.READY">Start</button>
+  
+  
+    <span class="relative inline-flex rounded-md shadow-sm"
+      *ngIf="simulationProcessState == SimulationProcessState.SIMULATING">
+      <button (click)="finishPressed()" type="button"
+        class="inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition ease-in-out duration-150">
+        Finish
+      </button>
+      <div class="flex absolute top-0 right-0 -mt-0.5 -mr-1">
+        <span class="absolute inline-flex animate-ping">
+          <span class="inline-flex rounded-full h-3 w-3 bg-pink-400 opacity-75"></span>
+        </span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+      </div>
+    </span>
+    
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="restartPressed()"
+      *ngIf="simulationProcessState == SimulationProcessState.DONE">Restart</button>
+  </div>

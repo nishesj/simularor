@@ -1,5 +1,7 @@
 <div *ngIf="matchesResponse$ | async as matchesResponse else loadingOrError"
     class="flex-row justify-content-center align-item-center p-6 bg-white rounded-lg border border-gray-200 shadow-md">
+    <app-simulation-states [simulationProcessState]="simulationProcessState" (restart)="restart()" (finished)="finished(matchesResponse)"
+        (start)="start(matchesResponse)"></app-simulation-states>
     <app-simulation-summary [matchesResponse]="matchesResponse">
     </app-simulation-summary>
 </div>
